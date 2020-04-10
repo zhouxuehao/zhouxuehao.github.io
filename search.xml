@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>原型原型链</title>
+    <url>/2020/04/08/javaScript/prototype/</url>
+    <content><![CDATA[<p><img src="../images/prototype.png" alt="s"></p>
+<a id="more"></a>
+<p>111</p>
+]]></content>
+      <categories>
+        <category>JavaScript</category>
+      </categories>
+  </entry>
+  <entry>
     <title>浏览器-本地存储</title>
     <url>/2020/04/09/browser/localStorage/</url>
     <content><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586456743592&di=57080dbf6fde90b18a4f4facc4572913&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D825583228%2C4117796698%26fm%3D214%26gp%3D0.jpg" alt=""></p>
@@ -89,17 +100,6 @@ sessionStorage.clear();​//清空sessionStorage中所有信息</code></pre><h3 
 ]]></content>
       <categories>
         <category>浏览器</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>原型原型链</title>
-    <url>/2020/04/08/javaScript/prototype/</url>
-    <content><![CDATA[<p><img src="../images/prototype.png" alt="s"></p>
-<a id="more"></a>
-<p>111</p>
-]]></content>
-      <categories>
-        <category>JavaScript</category>
       </categories>
   </entry>
 </search>
