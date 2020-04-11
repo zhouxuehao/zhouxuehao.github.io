@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content=#58b77a>
+  <title>数据类型+判断 | Dark</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="zhouxuehao">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <script id="hexo-configurations">
+  var CONFIG = {
+    root: '/',
+    theme: 'lx',
+    version: '0.3.9',
+    localsearch:{
+      "enable": true,
+      "trigger": "auto",
+      "top_n_per_article": 1,
+      "unescape": false,
+      "preload": false
+      },
+    path: 'search.xml'
+  };
+</script>
+
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/css/main.min.css">
+  <style type="text/css">
+    pre,
+    code {
+      font-family: 'Fira Code', monospace;
+    }
+    html {
+      font-family: sans-serif;
+    }
+    body {
+      font-family: sans-serif;
+    }
+    h1, h2, h3, h4, h5, figure {
+      font-family: sans-serif;
+    }
+    .menu-container{
+      font-family: sans-serif;
+    }
+  </style>
+
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.jside.menu.js"></script>
+	<script>
+	$(document).ready(function(){
+	$(".menu-container").jSideMenu({
+	    jSidePosition: "position-right",
+	    jSideSticky: true,
+	    jSideSkin: "greenish",
+	     });
+	}); 
+	</script>
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
+<meta name="generator" content="Hexo 4.2.0"></head>
+<body>
+<div class="single">
+<a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i></a>
+<div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Search..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+<div id="page">
+<div id="lx-aside" style="background-image: url(/images/timg.jpeg)" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  <div class="page-title">
+    <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
+    <span>2020-04-11</span>
+    <h2>数据类型+判断</h2>
+    
+    <div class="social-links">
+    <a href="https://github.com/zhouxuehao" target="_blank"><i class="fa fa-github fa-fw"></i></a>
+    <a href="https://www.zhihu.com/people/jiang-hu-han-fei-guan" target="_blank"><i class="fa fa-square fa-fw"></i></a>
+</div></div>
+</div>
+</div>
+
+<div id="lx-main-content">
+  <div class="lx-post">
+    <div class="lx-entry padding">
+      <div>
+        <p><img style="width: 100%;" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586632270950&di=998c87c412fb39e96e225a05d1be0209&imgtype=0&src=http%3A%2F%2Faliyunzixunbucket.oss-cn-beijing.aliyuncs.com%2Fjpg%2F87663f69708a759057faff4d8b10d979.jpg%3Fx-oss-process%3Dimage%2Fresize%2Cp_100%2Fauto-orient%2C1%2Fquality%2Cq_90%2Fformat%2Cjpg%2Fwatermark%2Cimage_eXVuY2VzaGk%3D%2Ct_100'></img></p>
+<a id="more"></a>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="基本数据类型：String-boolean-Number-Symbol（ES6新增）-Undefined-Null"><a href="#基本数据类型：String-boolean-Number-Symbol（ES6新增）-Undefined-Null" class="headerlink" title="基本数据类型：String,boolean,Number,Symbol（ES6新增）,Undefined, Null"></a>基本数据类型：String,boolean,Number,Symbol（ES6新增）,Undefined, Null</h3><h3 id="引用数据类型：Object-function"><a href="#引用数据类型：Object-function" class="headerlink" title="引用数据类型：Object,function"></a>引用数据类型：Object,function</h3><h3 id="基本数据类型中有两个为特殊数据类型：-null-undefined"><a href="#基本数据类型中有两个为特殊数据类型：-null-undefined" class="headerlink" title="基本数据类型中有两个为特殊数据类型： null, undefined."></a>基本数据类型中有两个为特殊数据类型： null, undefined.</h3><h2 id="Symbol："><a href="#Symbol：" class="headerlink" title="Symbol："></a>Symbol：</h2><h3 id="ES6新增了一种-Symbol-。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。"><a href="#ES6新增了一种-Symbol-。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。" class="headerlink" title="ES6新增了一种 Symbol 。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。"></a>ES6新增了一种 Symbol 。这种类型的对象永不相等，即始创建的时候传入相同的值，可以解决属性名冲突的问题，做为标记。</h3><h3 id="Symbol"><a href="#Symbol" class="headerlink" title="Symbol"></a>Symbol</h3><h3 id="作用：独一无二的类型"><a href="#作用：独一无二的类型" class="headerlink" title="作用：独一无二的类型"></a>作用：独一无二的类型</h3><h3 id="不能被遍历到的"><a href="#不能被遍历到的" class="headerlink" title="不能被遍历到的"></a>不能被遍历到的</h3><h2 id="谷歌67版本："><a href="#谷歌67版本：" class="headerlink" title="谷歌67版本："></a>谷歌67版本：</h2><h3 id="出现了一种-bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型）。"><a href="#出现了一种-bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型）。" class="headerlink" title="出现了一种 bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型）。"></a>出现了一种 bigInt。是指安全存储、操作大整数。（但是很多人不把这个做为一个类型）。</h3><h2 id="转换："><a href="#转换：" class="headerlink" title="转换："></a>转换：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String  强制转换为字符串</span><br><span class="line">Number 强转为 数值</span><br><span class="line">Boolban  强转为布尔值</span><br><span class="line">New Ojbject  对象型不能强转字符串</span><br></pre></td></tr></table></figure>
+<p><code>false,0，mull, undefined,NaN强转为布尔值后变成 false。
+其他强转布尔值都会变成ture</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">toString（）；转换为字符串</span><br><span class="line">2-36进制转换</span><br><span class="line">var b1&#x3D;37</span><br><span class="line">console.log(b1.toString () )</span><br><span class="line"></span><br><span class="line">toFixed（）；强制转换字符串，可以保留几位小数；自动四舍五入；</span><br><span class="line"></span><br><span class="line">parseInt（）；强转为整数</span><br><span class="line">parseFloat（）；强转为浮点数（小数）</span><br></pre></td></tr></table></figure>
+<p><code>如果将字符串强转为整形和浮点型，字符型有字符。如果字符在第一位转换结果是NaN。
+ 如果字符在后面，转化到字符前一位。</code></p>
+<h3 id="NaN-是数值类型-结果是非数值"><a href="#NaN-是数值类型-结果是非数值" class="headerlink" title="NaN 是数值类型  结果是非数值"></a>NaN 是数值类型  结果是非数值</h3><h2 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h2><h3 id="1-typeof"><a href="#1-typeof" class="headerlink" title="1: typeof"></a>1: typeof</h3><h4 id="返回数据类型，包含这7种：-number、boolean、symbol、string、object、undefined、function。"><a href="#返回数据类型，包含这7种：-number、boolean、symbol、string、object、undefined、function。" class="headerlink" title="返回数据类型，包含这7种： number、boolean、symbol、string、object、undefined、function。"></a>返回数据类型，包含这7种： number、boolean、symbol、string、object、undefined、function。</h4><h4 id="typeof-null-返回类型错误，返回object"><a href="#typeof-null-返回类型错误，返回object" class="headerlink" title="typeof null   返回类型错误，返回object"></a>typeof null   返回类型错误，返回object</h4><h4 id="引用类型，除了function返回function类型外，其他均返回object。"><a href="#引用类型，除了function返回function类型外，其他均返回object。" class="headerlink" title="引用类型，除了function返回function类型外，其他均返回object。"></a>引用类型，除了function返回function类型外，其他均返回object。</h4><h4 id="其中，null-有属于自己的数据类型-Null-，-引用类型中的-数组、日期、正则-也都有属于自己的具体类型，而-typeof-对于这些类型的处理，只返回了处于其原型链最顶端的-Object-类型，没有错，但不是我们想要的结果。"><a href="#其中，null-有属于自己的数据类型-Null-，-引用类型中的-数组、日期、正则-也都有属于自己的具体类型，而-typeof-对于这些类型的处理，只返回了处于其原型链最顶端的-Object-类型，没有错，但不是我们想要的结果。" class="headerlink" title="其中，null 有属于自己的数据类型 Null ， 引用类型中的 数组、日期、正则 也都有属于自己的具体类型，而 typeof 对于这些类型的处理，只返回了处于其原型链最顶端的 Object 类型，没有错，但不是我们想要的结果。"></a>其中，null 有属于自己的数据类型 Null ， 引用类型中的 数组、日期、正则 也都有属于自己的具体类型，而 typeof 对于这些类型的处理，只返回了处于其原型链最顶端的 Object 类型，没有错，但不是我们想要的结果。</h4><h3 id="2：toString"><a href="#2：toString" class="headerlink" title="2：toString"></a>2：toString</h3><h4 id="toString-是-Object-的原型方法，调用该方法，默认返回当前对象的-Class-。这是一个内部属性，其格式为-object-Xxx-，其中-Xxx-就是对象的类型。"><a href="#toString-是-Object-的原型方法，调用该方法，默认返回当前对象的-Class-。这是一个内部属性，其格式为-object-Xxx-，其中-Xxx-就是对象的类型。" class="headerlink" title="toString() 是 Object 的原型方法，调用该方法，默认返回当前对象的 [[Class]] 。这是一个内部属性，其格式为 [object Xxx] ，其中 Xxx 就是对象的类型。"></a>toString() 是 Object 的原型方法，调用该方法，默认返回当前对象的 [[Class]] 。这是一个内部属性，其格式为 [object Xxx] ，其中 Xxx 就是对象的类型。</h4><h4 id="对于-Object-对象，直接调用-toString-就能返回-object-Object-。而对于其他对象，则需要通过-call-apply-来调用才能返回正确的类型信息。"><a href="#对于-Object-对象，直接调用-toString-就能返回-object-Object-。而对于其他对象，则需要通过-call-apply-来调用才能返回正确的类型信息。" class="headerlink" title="对于 Object 对象，直接调用 toString()  就能返回 [object Object] 。而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。"></a>对于 Object 对象，直接调用 toString()  就能返回 [object Object] 。而对于其他对象，则需要通过 call / apply 来调用才能返回正确的类型信息。</h4><h4 id="判断类型举例："><a href="#判断类型举例：" class="headerlink" title="判断类型举例："></a>判断类型举例：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.toString.call(&#39;&#39;) ;   &#x2F;&#x2F; [object String]</span><br><span class="line">Object.prototype.toString.call(1) ;    &#x2F;&#x2F; [object Number]</span><br><span class="line">Object.prototype.toString.call(true) ; &#x2F;&#x2F; [object Boolean]</span><br><span class="line">Object.prototype.toString.call(Symbol()); &#x2F;&#x2F;[object Symbol]</span><br><span class="line">Object.prototype.toString.call(undefined) ; &#x2F;&#x2F; [object Undefined]</span><br><span class="line">Object.prototype.toString.call(null) ; &#x2F;&#x2F; [object Null]</span><br><span class="line">Object.prototype.toString.call(new Function()) ; &#x2F;&#x2F; [object Function]</span><br><span class="line">Object.prototype.toString.call(new Date()) ; &#x2F;&#x2F; [object Date]</span><br><span class="line">Object.prototype.toString.call([]) ; &#x2F;&#x2F; [object Array]</span><br><span class="line">Object.prototype.toString.call(Object) ; &#x2F;&#x2F; [object Function]</span><br><span class="line">Object.prototype.toString.call(new RegExp()) ; &#x2F;&#x2F; [object RegExp]</span><br><span class="line">Object.prototype.toString.call(new Error()) ; &#x2F;&#x2F; [object Error]</span><br><span class="line">Object.prototype.toString.call(document) ; &#x2F;&#x2F; [object HTMLDocument]</span><br><span class="line">Object.prototype.toString.call(window) ; &#x2F;&#x2F;[object global] window 是全局对象 global 的引用</span><br></pre></td></tr></table></figure>
+
+<h3 id="3：constructor"><a href="#3：constructor" class="headerlink" title="3：constructor"></a>3：constructor</h3><h4 id="constructor是原型prototype的一个属性，当函数被定义时候，js引擎会为函数添加原型prototype，并且这个prototype中constructor属性指向函数引用，-因此重写prototype会丢失原来的constructor。"><a href="#constructor是原型prototype的一个属性，当函数被定义时候，js引擎会为函数添加原型prototype，并且这个prototype中constructor属性指向函数引用，-因此重写prototype会丢失原来的constructor。" class="headerlink" title="constructor是原型prototype的一个属性，当函数被定义时候，js引擎会为函数添加原型prototype，并且这个prototype中constructor属性指向函数引用， 因此重写prototype会丢失原来的constructor。"></a>constructor是原型prototype的一个属性，当函数被定义时候，js引擎会为函数添加原型prototype，并且这个prototype中constructor属性指向函数引用， 因此重写prototype会丢失原来的constructor。</h4><p><code>不过这种方法有问题：</code></p>
+<h4 id="1：null-和-undefined-无constructor，这种方法判断不了。"><a href="#1：null-和-undefined-无constructor，这种方法判断不了。" class="headerlink" title="1：null 和 undefined 无constructor，这种方法判断不了。"></a>1：null 和 undefined 无constructor，这种方法判断不了。</h4><h4 id="2：还有，如果自定义对象，开发者重写prototype之后，原有的constructor会丢失，因此，为了规范开发，在重写对象原型时一般都需要重新给-constructor-赋值，以保证对象实例的类型不被篡改。"><a href="#2：还有，如果自定义对象，开发者重写prototype之后，原有的constructor会丢失，因此，为了规范开发，在重写对象原型时一般都需要重新给-constructor-赋值，以保证对象实例的类型不被篡改。" class="headerlink" title="2：还有，如果自定义对象，开发者重写prototype之后，原有的constructor会丢失，因此，为了规范开发，在重写对象原型时一般都需要重新给 constructor 赋值，以保证对象实例的类型不被篡改。"></a>2：还有，如果自定义对象，开发者重写prototype之后，原有的constructor会丢失，因此，为了规范开发，在重写对象原型时一般都需要重新给 constructor 赋值，以保证对象实例的类型不被篡改。</h4><p><img src="https://img2018.cnblogs.com/blog/1334093/201904/1334093-20190422154822998-1507326377.png" alt=""></p>
+<h3 id="4：instanceof"><a href="#4：instanceof" class="headerlink" title="4：instanceof"></a>4：instanceof</h3><h4 id="instanceof-是用来判断-A-是否为-B-的实例，表达式为：A-instanceof-B，如果-A-是-B-的实例，则返回-true-否则返回-false。-在这里需要特别注意的是：instanceof-检测的是原型，"><a href="#instanceof-是用来判断-A-是否为-B-的实例，表达式为：A-instanceof-B，如果-A-是-B-的实例，则返回-true-否则返回-false。-在这里需要特别注意的是：instanceof-检测的是原型，" class="headerlink" title="instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true,否则返回 false。 在这里需要特别注意的是：instanceof 检测的是原型，"></a>instanceof 是用来判断 A 是否为 B 的实例，表达式为：A instanceof B，如果 A 是 B 的实例，则返回 true,否则返回 false。 在这里需要特别注意的是：instanceof 检测的是原型，</h4><p><img src="https://img2018.cnblogs.com/blog/1334093/201904/1334093-20190422160537795-2137053556.png" alt=""></p>
+<h4 id="由上图可以看出-的原型指向Array-prototype，间接指向Object-prototype-因此-instanceof-Array-返回true，-instanceof-Object-也返回true。"><a href="#由上图可以看出-的原型指向Array-prototype，间接指向Object-prototype-因此-instanceof-Array-返回true，-instanceof-Object-也返回true。" class="headerlink" title="由上图可以看出[]的原型指向Array.prototype，间接指向Object.prototype, 因此 [] instanceof Array 返回true， [] instanceof Object 也返回true。"></a>由上图可以看出[]的原型指向Array.prototype，间接指向Object.prototype, 因此 [] instanceof Array 返回true， [] instanceof Object 也返回true。</h4><h4 id="instanceof-只能用来判断两个对象是否属于实例关系，-而不能判断一个对象实例具体属于哪种类型。"><a href="#instanceof-只能用来判断两个对象是否属于实例关系，-而不能判断一个对象实例具体属于哪种类型。" class="headerlink" title="instanceof 只能用来判断两个对象是否属于实例关系， 而不能判断一个对象实例具体属于哪种类型。"></a>instanceof 只能用来判断两个对象是否属于实例关系， 而不能判断一个对象实例具体属于哪种类型。</h4>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(/images/avatar.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/04/12/javaScript/definingVariablese/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>let,var...</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(/images/timg.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/04/10/css/boxModel/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>CSS-盒子模型</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
+</div>
+<div class="comment"><div id="comments"></div></div>
+<footer>
+  <div>
+  Copyright &copy; 2019.<a href="/">Dark</a><br>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> | Theme <a href="https://lx.js.org" target="_blank">Lx</a><br>
+  </div>
+</footer>
+
+</div>
+
+<button class="hamburger hamburger--arrow-r" type="button">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+</button> 
+<div class="menu visibility">
+  <div class="menu-head">
+    <span class="layer">
+      <div class="col">
+        <div class="row for-pic">
+          <div class="profile-pic">
+            <a href="/"><img src="/images/avatar.jpeg" alt="zhouxuehao"/></a>
+          </div>
+        </div>
+        <div class="row for-name">
+          <p>zhouxuehao</p>
+          <span class="tagline">学习永远不晚。</span>
+        </div>
+      </div>
+    </span>
+  </div>
+  <nav class="menu-container">
+  <ul class="menu-items">
+    <li><a href="/"><i class="fa fa-home fa-fw"></i>首页</a></li>
+    <li><a href="/archives/"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-th-list fa-fw"></i>分类</span>
+        <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/CSS/">CSS</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8/">浏览器</a></li></ul>
+    </li>
+    <li class="has-sub"><span class="dropdown-heading">
+      <i class="fa fa-bookmark fa-fw"></i>页面</span>
+        <ul>
+          <li><a href="/message/">留言</a></li>
+        </ul>
+    </li>
+    
+  </ul>
+  </nav>
+</div>
+
+<div class="gototop js-top">
+  <a href="#" class="js-gotop"><i class="fa fa-arrow-up"></i></a>
+</div>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/jquery.easing.min.js"></script>
+<script>
+(function () {
+	"use strict";
+	var goToTop = function() {
+		$(".js-gotop").on("click", function(event){
+			event.preventDefault();
+			$("html, body").animate({
+				scrollTop: $("html").offset().top
+			}, 500, "easeInOutExpo");
+			return false;
+		});
+		$(window).scroll(function(){
+			var $win = $(window);
+			if ($win.scrollTop() > 200) {
+				$(".js-top").addClass("active");
+			} else {
+				$(".js-top").removeClass("active");
+			}
+		});
+	};
+	$(function(){
+		goToTop();
+	});
+}());
+</script>
+<script src="//cdn.jsdelivr.net/npm/theme-lx@0.3.9/source/js/local.search.js"></script>
+<script src="//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'RP7pxcFl8zTpUekLssw7qKjq-gzGzoHsz',
+    appKey: 'AcjET0JfENo8ei5QvQ6LLMwQ',
+    placeholder: 'Go go go !',
+    avatar: 'identicon',
+    meta: guest,
+    pageSize: '10' || 10,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+</body>
+</html>
