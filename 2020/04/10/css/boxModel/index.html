@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme-color" content=#58b77a>
-  <title>留言 | Dark</title>
+  <title>CSS-盒子模型 | Dark</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="zhouxuehao">
   <meta name="keywords" content="">
@@ -62,7 +62,7 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4/css/font-awesome.min.css">
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body>
-<div  class="single">
+<div class="single">
 <a href="javascript:;" class="popup-trigger"><i class="menu-item-icon fa fa-search fa-fw"></i></a>
 <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
@@ -86,8 +86,8 @@
   <div class="overlay">
   <div class="page-title">
     <div class="avatar"><a href="/"><img src="/images/avatar.jpeg"></a></div>
-    <span>2020-04-08</span>
-    <h2>留言</h2>
+    <span>2020-04-10</span>
+    <h2>CSS-盒子模型</h2>
     
     <div class="social-links">
     <a href="https://github.com/zhouxuehao" target="_blank"><i class="fa fa-github fa-fw"></i></a>
@@ -97,14 +97,47 @@
 </div>
 
 <div id="lx-main-content">
-  <div class="lx-post"> 
+  <div class="lx-post">
     <div class="lx-entry padding">
       <div>
-        
+        <p><img style="width: 100%;" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586603896320&di=b56540e1f6f8fd3c0ee62fe0147e9e7f&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D1133747998%2C3446302875%26fm%3D214%26gp%3D0.jpg'></img></p>
+<a id="more"></a>
+<h3 id="盒子模型分为两种："><a href="#盒子模型分为两种：" class="headerlink" title="盒子模型分为两种："></a>盒子模型分为两种：</h3><h4 id="第一种是W3c标准的盒子模型（标准盒模型）"><a href="#第一种是W3c标准的盒子模型（标准盒模型）" class="headerlink" title="* 第一种是W3c标准的盒子模型（标准盒模型）"></a>* 第一种是W3c标准的盒子模型（标准盒模型）</h4><h4 id="第二种IE标准的盒子模型（怪异盒模型）"><a href="#第二种IE标准的盒子模型（怪异盒模型）" class="headerlink" title="* 第二种IE标准的盒子模型（怪异盒模型）"></a>* 第二种IE标准的盒子模型（怪异盒模型）</h4><h4 id="当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。"><a href="#当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。" class="headerlink" title="当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。"></a>当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。</h4><h3 id="标准盒模型与怪异盒模型的表现效果的区别之处："><a href="#标准盒模型与怪异盒模型的表现效果的区别之处：" class="headerlink" title="标准盒模型与怪异盒模型的表现效果的区别之处："></a>标准盒模型与怪异盒模型的表现效果的区别之处：</h3><h4 id="1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。"><a href="#1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。" class="headerlink" title="1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。"></a>1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。</h4><h4 id="标准盒模型下盒子的大小-content-border-padding-margin"><a href="#标准盒模型下盒子的大小-content-border-padding-margin" class="headerlink" title="标准盒模型下盒子的大小 = content + border + padding + margin"></a>标准盒模型下盒子的大小 = content + border + padding + margin</h4><p><img src="https://d.xiaojishu.com/2017/12/11/0438c4471597387bc852af74b888dd55.jpg" alt=""></p>
+<h4 id="2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content-border-padding）；height指的是内容、边框、内边距总的高度"><a href="#2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content-border-padding）；height指的是内容、边框、内边距总的高度" class="headerlink" title="2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content + border + padding）；height指的是内容、边框、内边距总的高度"></a>2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content + border + padding）；height指的是内容、边框、内边距总的高度</h4><p><img src="https://d.xiaojishu.com/2017/12/11/e08e1649e8f51ea024159d2b20a13705.jpg" alt=""></p>
+
       </div>
-    </div>		
+    </div>
   </div>
 </div>
+<div class="lx-navigation">
+	<div class="lx-cover prev lx-cover-sm" style="background-image: url(/images/avatar.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="#">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Next</span>
+						<h3>没有更新的文章</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+        <div class="lx-cover next lx-cover-sm" style="background-image: url(/images/timg.jpeg)">
+		<div class="overlay"></div>
+		<a class="copy" href="/2020/04/09/browser/compatible/">
+			<div class="display-t">
+				<div class="display-tc">
+					<div>
+						<span>Prev</span>
+						<h3>浏览器-兼容</h3>
+					</div>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>
+
 </div>
 <div class="comment"><div id="comments"></div></div>
 <footer>

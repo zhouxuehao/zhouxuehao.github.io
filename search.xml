@@ -12,52 +12,11 @@
       </categories>
   </entry>
   <entry>
-    <title>浏览器-本地存储</title>
-    <url>/2020/04/09/browser/localStorage/</url>
-    <content><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586456743592&di=57080dbf6fde90b18a4f4facc4572913&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D825583228%2C4117796698%26fm%3D214%26gp%3D0.jpg" alt=""></p>
-<a id="more"></a>
-<h1 id="在浏览器中存储主要分为以下三种方式"><a href="#在浏览器中存储主要分为以下三种方式" class="headerlink" title="在浏览器中存储主要分为以下三种方式"></a>在浏览器中存储主要分为以下三种方式</h1><h2 id="1、localstorage-2、sessionStorage-3、cookie-4、localStorage与sessionStorage区别"><a href="#1、localstorage-2、sessionStorage-3、cookie-4、localStorage与sessionStorage区别" class="headerlink" title="1、localstorage  2、sessionStorage  3、cookie 4、localStorage与sessionStorage区别"></a>1、localstorage  2、sessionStorage  3、cookie 4、localStorage与sessionStorage区别</h2><h3 id="1、localStorage"><a href="#1、localStorage" class="headerlink" title="1、localStorage"></a>1、localStorage</h3><p>生命周期永久，除非用户清除浏览器中的localStorage信息，否则永远存在；</p>
-<p>存放数据大小一般为5MB；</p>
-<p>仅在浏览器中保存，不参与服务器通信；</p>
-<p>API调用：</p>
-<pre><code>localStorage.setItem(&quot;key&quot;,&quot;value&quot;);//以“key”为名称存储一个值“value”
-
-localStorage.getItem(&quot;key&quot;);//获取名称为“key”的值
-
-localStorage.removeItem(&quot;key&quot;);//删除名称为“key”的信息。
-
-localStorage.clear();​//清空localStorage中所有信息</code></pre><h3 id="2、sessionStorage"><a href="#2、sessionStorage" class="headerlink" title="2、sessionStorage"></a>2、sessionStorage</h3><p>仅在当前会话下有效，关闭页面或者浏览器后被清除；</p>
-<p>存放数据大小一般为5MB；</p>
-<p>仅在浏览器中保存，不参与服务器通信；</p>
-<p>可以接受源生接口，亦可以再次封装来对Object和Array有更好的支持；</p>
-<p>API调用：</p>
-<pre><code>sessionStorage.setItem(&quot;key&quot;,&quot;value&quot;);//以“key”为名称存储一个值“value”
-
-sessionStorage.getItem(&quot;key&quot;);//获取名称为“key”的值
-
-sessionStorage.removeItem(&quot;key&quot;);//删除名称为“key”的信息。
-
-sessionStorage.clear();​//清空sessionStorage中所有信息</code></pre><h3 id="3、Cookie"><a href="#3、Cookie" class="headerlink" title="3、Cookie"></a>3、Cookie</h3><p>生命周期为在cookie设置的过期时间之前一直有效，即使窗口或者浏览器关闭；</p>
-<p>存放数据大小为4K；</p>
-<p>有存储个数限制（各浏览器不同），一般不超过20个；</p>
-<p>与服务器端通信，每次都会携带在HTTP头中，cookie存储数据过多会带来性能问题；</p>
-<h3 id="4、localStorage与sessionStorage区别"><a href="#4、localStorage与sessionStorage区别" class="headerlink" title="4、localStorage与sessionStorage区别"></a>4、localStorage与sessionStorage区别</h3><p>我经常用到的存储方式为前两种，因此需要清楚了解它们之间的区别。</p>
-<p>localStorage与sessionStorage的API调用方法相同；</p>
-<p>不同浏览器无法共享localStorage或sessionStorage中的信息；</p>
-<p>相同浏览器的不同页面可以共享相同的localStorage（前提是页面属于相同域名和端口）；</p>
-<p>相同浏览器的不同页面无法共享sessionStorage的信息；</p>
-<h1 id="我的应用场景"><a href="#我的应用场景" class="headerlink" title="我的应用场景"></a>我的应用场景</h1><p>1、用vue做的后台管理平台，允许打开多个页面，不同页面可登陆不同的用户，用户之间互不干扰。</p>
-<p>结合上述信息与要求，如果使用localStorage，因为相同域名和端口，会导致不同页面数据共享，从而引发混乱。如果采用sessionStorage，不同页面即可保证互不干扰，且vue为SPA，无需打开新的页面，因此不会相互干扰。实测可行。</p>
-]]></content>
-      <categories>
-        <category>浏览器</category>
-      </categories>
-  </entry>
-  <entry>
     <title>浏览器-兼容</title>
     <url>/2020/04/09/browser/compatible/</url>
-    <content><![CDATA[<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586459136951&di=0e73a1a850b2b670f1b348e626dc1063&imgtype=0&src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-449ef3989ff7e7ec30ec9b01702cb7e6_1200x500.jpg" alt=""></p>
+    <content><![CDATA[<p><img style="width: 100%" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586459136951&di=0e73a1a850b2b670f1b348e626dc1063&imgtype=0&src=http%3A%2F%2Fpic4.zhimg.com%2Fv2-449ef3989ff7e7ec30ec9b01702cb7e6_1200x500.jpg'></img></p>
 <a id="more"></a>
+
 <h1 id="常见的浏览器兼容"><a href="#常见的浏览器兼容" class="headerlink" title="常见的浏览器兼容"></a>常见的浏览器兼容</h1><h3 id="常见的浏览器内核可以分四种：Trident、Gecko、Blink、Webkit"><a href="#常见的浏览器内核可以分四种：Trident、Gecko、Blink、Webkit" class="headerlink" title="常见的浏览器内核可以分四种：Trident、Gecko、Blink、Webkit"></a>常见的浏览器内核可以分四种：Trident、Gecko、Blink、Webkit</h3><h3 id="IE浏览器：Trident内核，也称为IE内核"><a href="#IE浏览器：Trident内核，也称为IE内核" class="headerlink" title="IE浏览器：Trident内核，也称为IE内核"></a>IE浏览器：Trident内核，也称为IE内核</h3><h3 id="Chrome浏览器：Webkit内核，现在是Blink内核"><a href="#Chrome浏览器：Webkit内核，现在是Blink内核" class="headerlink" title="Chrome浏览器：Webkit内核，现在是Blink内核"></a>Chrome浏览器：Webkit内核，现在是Blink内核</h3><h3 id="Firefox浏览器：Gecko内核，俗称Firefox内核"><a href="#Firefox浏览器：Gecko内核，俗称Firefox内核" class="headerlink" title="Firefox浏览器：Gecko内核，俗称Firefox内核"></a>Firefox浏览器：Gecko内核，俗称Firefox内核</h3><h3 id="Safari浏览器：Webkit内核"><a href="#Safari浏览器：Webkit内核" class="headerlink" title="Safari浏览器：Webkit内核"></a>Safari浏览器：Webkit内核</h3><h3 id="Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；"><a href="#Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；" class="headerlink" title="Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；"></a>Opera浏览器：最初是自己的Presto内核，后来加入谷歌大军，从Webkit又到了Blink内核；</h3><h3 id="360浏览器：IE-Chrome双内核"><a href="#360浏览器：IE-Chrome双内核" class="headerlink" title="360浏览器：IE+Chrome双内核"></a>360浏览器：IE+Chrome双内核</h3><h3 id="猎豹浏览器：IE-Chrome双内核"><a href="#猎豹浏览器：IE-Chrome双内核" class="headerlink" title="猎豹浏览器：IE+Chrome双内核"></a>猎豹浏览器：IE+Chrome双内核</h3><h3 id="百度浏览器：IE内核"><a href="#百度浏览器：IE内核" class="headerlink" title="百度浏览器：IE内核"></a>百度浏览器：IE内核</h3><h3 id="QQ浏览器：Trident（兼容模式）-Webkit（高速模式）"><a href="#QQ浏览器：Trident（兼容模式）-Webkit（高速模式）" class="headerlink" title="QQ浏览器：Trident（兼容模式）+Webkit（高速模式）"></a>QQ浏览器：Trident（兼容模式）+Webkit（高速模式）</h3><h2 id="常见的兼容性问题："><a href="#常见的兼容性问题：" class="headerlink" title="常见的兼容性问题："></a>常见的兼容性问题：</h2><h3 id="1-不同浏览器的标签默认的外补丁（margin）和内补丁（padding）不同"><a href="#1-不同浏览器的标签默认的外补丁（margin）和内补丁（padding）不同" class="headerlink" title="1.不同浏览器的标签默认的外补丁（margin）和内补丁（padding）不同"></a>1.不同浏览器的标签默认的外补丁（margin）和内补丁（padding）不同</h3><h4 id="解决方案：css里增加通配符-margin：0；padding：0"><a href="#解决方案：css里增加通配符-margin：0；padding：0" class="headerlink" title="解决方案：css里增加通配符*{margin：0；padding：0}"></a>解决方案：css里增加通配符*{margin：0；padding：0}</h4><h3 id="2-IE6双边距问题；在IE6中设置了float，同时又设置margin，就会出现边距问题"><a href="#2-IE6双边距问题；在IE6中设置了float，同时又设置margin，就会出现边距问题" class="headerlink" title="2.IE6双边距问题；在IE6中设置了float，同时又设置margin，就会出现边距问题"></a>2.IE6双边距问题；在IE6中设置了float，同时又设置margin，就会出现边距问题</h3><h4 id="解决方案：设置display：inline；"><a href="#解决方案：设置display：inline；" class="headerlink" title="解决方案：设置display：inline；"></a>解决方案：设置display：inline；</h4><h3 id="3-当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度"><a href="#3-当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度" class="headerlink" title="3.当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度"></a>3.当标签的高度设置小于10px，在IE6、IE7中会超出自己设置的高度</h3><h4 id="解决方案：设置display：inline；-1"><a href="#解决方案：设置display：inline；-1" class="headerlink" title="解决方案：设置display：inline；"></a>解决方案：设置display：inline；</h4><h3 id="4-图片默认有间距"><a href="#4-图片默认有间距" class="headerlink" title="4.图片默认有间距"></a>4.图片默认有间距</h3><h4 id="解决方案：使用float为img布局"><a href="#解决方案：使用float为img布局" class="headerlink" title="解决方案：使用float为img布局"></a>解决方案：使用float为img布局</h4><h3 id="5-IE9以下浏览器不能使用opacity"><a href="#5-IE9以下浏览器不能使用opacity" class="headerlink" title="5.IE9以下浏览器不能使用opacity"></a>5.IE9以下浏览器不能使用opacity</h3><h4 id="解决方案：opacity：0-5；filter：alfha（opacity-50）；filter：progid：DXlmageTransform-Microsoft-Alfha-style-0-opacity-50"><a href="#解决方案：opacity：0-5；filter：alfha（opacity-50）；filter：progid：DXlmageTransform-Microsoft-Alfha-style-0-opacity-50" class="headerlink" title="解决方案：opacity：0.5；filter：alfha（opacity=50）；filter：progid：DXlmageTransform.Microsoft.Alfha(style=0,opacity=50);"></a>解决方案：opacity：0.5；filter：alfha（opacity=50）；filter：progid：DXlmageTransform.Microsoft.Alfha(style=0,opacity=50);</h4><h3 id="6-边距重叠问题；"><a href="#6-边距重叠问题；" class="headerlink" title="6.边距重叠问题；"></a>6.边距重叠问题；</h3><h4 id="解决方案：当相邻两个元素都设置了margin边距时，margin将取最大值，舍弃最小值；"><a href="#解决方案：当相邻两个元素都设置了margin边距时，margin将取最大值，舍弃最小值；" class="headerlink" title="解决方案：当相邻两个元素都设置了margin边距时，margin将取最大值，舍弃最小值；"></a>解决方案：当相邻两个元素都设置了margin边距时，margin将取最大值，舍弃最小值；</h4><h3 id="7-cursor：hand显示手型在safari上不支持"><a href="#7-cursor：hand显示手型在safari上不支持" class="headerlink" title="7.cursor：hand显示手型在safari上不支持"></a>7.cursor：hand显示手型在safari上不支持</h3><h4 id="解决方案：统一使用cursor：pointer；"><a href="#解决方案：统一使用cursor：pointer；" class="headerlink" title="解决方案：统一使用cursor：pointer；"></a>解决方案：统一使用cursor：pointer；</h4><h3 id="8-两个块级元素，父元素设置了overflow：auto；子元素设置了position：relative；且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；"><a href="#8-两个块级元素，父元素设置了overflow：auto；子元素设置了position：relative；且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；" class="headerlink" title="8.两个块级元素，父元素设置了overflow：auto；子元素设置了position：relative；且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；"></a>8.两个块级元素，父元素设置了overflow：auto；子元素设置了position：relative；且高度大于父元素，在IE6、IE7会被隐藏而不是溢出；</h3><h4 id="解决方案：父级元素设置position：relative"><a href="#解决方案：父级元素设置position：relative" class="headerlink" title="解决方案：父级元素设置position：relative"></a>解决方案：父级元素设置position：relative</h4><h3 id="9-const问题"><a href="#9-const问题" class="headerlink" title="9.const问题"></a>9.const问题</h3><h4 id="说明：Firefox下，可以使用const关键字来定义常量；IE下，只能使用var关键字来定义常量。"><a href="#说明：Firefox下，可以使用const关键字来定义常量；IE下，只能使用var关键字来定义常量。" class="headerlink" title="说明：Firefox下，可以使用const关键字来定义常量；IE下，只能使用var关键字来定义常量。"></a>说明：Firefox下，可以使用const关键字来定义常量；IE下，只能使用var关键字来定义常量。</h4><h4 id="解决方法：统一使用var关键字来定义常量。"><a href="#解决方法：统一使用var关键字来定义常量。" class="headerlink" title="解决方法：统一使用var关键字来定义常量。"></a>解决方法：统一使用var关键字来定义常量。</h4><h3 id="10-event-srcElement问题"><a href="#10-event-srcElement问题" class="headerlink" title="10.event.srcElement问题"></a>10.event.srcElement问题</h3><h4 id="问题说明：IE下，event对象有srcElement属性，但是没有target属性；Firefox下，event对象有target属性，但是没有srcElement属性。"><a href="#问题说明：IE下，event对象有srcElement属性，但是没有target属性；Firefox下，event对象有target属性，但是没有srcElement属性。" class="headerlink" title="问题说明：IE下，event对象有srcElement属性，但是没有target属性；Firefox下，event对象有target属性，但是没有srcElement属性。"></a>问题说明：IE下，event对象有srcElement属性，但是没有target属性；Firefox下，event对象有target属性，但是没有srcElement属性。</h4><h4 id="解决方法：使用srcObj-event-srcElement-event-srcElement-event-target"><a href="#解决方法：使用srcObj-event-srcElement-event-srcElement-event-target" class="headerlink" title="解决方法：使用srcObj = event.srcElement?event.srcElement:event.target;"></a>解决方法：使用srcObj = event.srcElement?event.srcElement:event.target;</h4><h3 id="11-事件绑定"><a href="#11-事件绑定" class="headerlink" title="11.事件绑定"></a>11.事件绑定</h3><h4 id="IE-dom-attachEvent"><a href="#IE-dom-attachEvent" class="headerlink" title="IE:dom.attachEvent();"></a>IE:dom.attachEvent();</h4><h4 id="其他浏览器：dom-addEventListener"><a href="#其他浏览器：dom-addEventListener" class="headerlink" title="其他浏览器：dom.addEventListener();"></a>其他浏览器：dom.addEventListener();</h4><h4 id="标准浏览器采用事件捕获的方式对应IE的事件冒泡机制（即标准由最外元素至最内元素或者IE由最内元素到最外元素）最后标准方亦觉得IE这方面的比较合理，所以便将事件冒泡纳入了标准，这也是addEventListener第三个参数的由来，而且事件冒泡作为了默认值。"><a href="#标准浏览器采用事件捕获的方式对应IE的事件冒泡机制（即标准由最外元素至最内元素或者IE由最内元素到最外元素）最后标准方亦觉得IE这方面的比较合理，所以便将事件冒泡纳入了标准，这也是addEventListener第三个参数的由来，而且事件冒泡作为了默认值。" class="headerlink" title="标准浏览器采用事件捕获的方式对应IE的事件冒泡机制（即标准由最外元素至最内元素或者IE由最内元素到最外元素）最后标准方亦觉得IE这方面的比较合理，所以便将事件冒泡纳入了标准，这也是addEventListener第三个参数的由来，而且事件冒泡作为了默认值。"></a>标准浏览器采用事件捕获的方式对应IE的事件冒泡机制（即标准由最外元素至最内元素或者IE由最内元素到最外元素）最后标准方亦觉得IE这方面的比较合理，所以便将事件冒泡纳入了标准，这也是addEventListener第三个参数的由来，而且事件冒泡作为了默认值。</h4><h3 id="12-操作tr的html"><a href="#12-操作tr的html" class="headerlink" title="12.操作tr的html"></a>12.操作tr的html</h3><h4 id="在ie9以下，不能操作tr的innerHTML"><a href="#在ie9以下，不能操作tr的innerHTML" class="headerlink" title="在ie9以下，不能操作tr的innerHTML"></a>在ie9以下，不能操作tr的innerHTML</h4><h3 id="13-ajax略有不同"><a href="#13-ajax略有不同" class="headerlink" title="13.ajax略有不同"></a>13.ajax略有不同</h3><h4 id="IE：ActiveXObject"><a href="#IE：ActiveXObject" class="headerlink" title="IE：ActiveXObject"></a>IE：ActiveXObject</h4><h4 id="其他：xmlHttpReuest"><a href="#其他：xmlHttpReuest" class="headerlink" title="其他：xmlHttpReuest"></a>其他：xmlHttpReuest</h4><h3 id="14-对象宽高赋值问题"><a href="#14-对象宽高赋值问题" class="headerlink" title="14.对象宽高赋值问题"></a>14.对象宽高赋值问题</h3><h4 id="问题说明：FireFox中类似obj-style-height-imgObj-height的语句无效。"><a href="#问题说明：FireFox中类似obj-style-height-imgObj-height的语句无效。" class="headerlink" title="问题说明：FireFox中类似obj.style.height = imgObj.height的语句无效。"></a>问题说明：FireFox中类似obj.style.height = imgObj.height的语句无效。</h4><h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h3 id="1-cursor-hand-VS-cursor-pointerfirefox不支持hand，但ie支持pointer"><a href="#1-cursor-hand-VS-cursor-pointerfirefox不支持hand，但ie支持pointer" class="headerlink" title="1.cursor:hand VS cursor:pointerfirefox不支持hand，但ie支持pointer"></a>1.cursor:hand VS cursor:pointerfirefox不支持hand，但ie支持pointer</h3><h4 id="解决方法-统一使用pointer"><a href="#解决方法-统一使用pointer" class="headerlink" title="解决方法: 统一使用pointer"></a>解决方法: 统一使用pointer</h4><h3 id="2-innerText在IE中能正常工作，但在FireFox中却不行"><a href="#2-innerText在IE中能正常工作，但在FireFox中却不行" class="headerlink" title="2. innerText在IE中能正常工作，但在FireFox中却不行."></a>2. innerText在IE中能正常工作，但在FireFox中却不行.</h3><h4 id="需用textContent。"><a href="#需用textContent。" class="headerlink" title="需用textContent。"></a>需用textContent。</h4><h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法:"></a>解决方法:</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">if(navigator.appName.indexOf(&quot;Explorer&quot;) &gt; -1)&#123;</span><br><span class="line">   document.getElementById(&#39;element&#39;).innerText &#x3D; &quot;my text&quot;;</span><br><span class="line">   &#125; else&#123;</span><br><span class="line">   document.getElementById(&#39;element&#39;).textContent &#x3D; &quot;my text&quot;;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="3-CSS透明"><a href="#3-CSS透明" class="headerlink" title="3. CSS透明"></a>3. CSS透明</h3><h4 id="IE：filter-progid-DXImageTransform-Microsoft-Alpha-style-0-opacity-60-。"><a href="#IE：filter-progid-DXImageTransform-Microsoft-Alpha-style-0-opacity-60-。" class="headerlink" title="IE：filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60)。"></a>IE：filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60)。</h4><h4 id="FF：opacity-0-6。"><a href="#FF：opacity-0-6。" class="headerlink" title="FF：opacity:0.6。"></a>FF：opacity:0.6。</h4><h3 id="4-css中的width和padding"><a href="#4-css中的width和padding" class="headerlink" title="4. css中的width和padding"></a>4. css中的width和padding</h3><h4 id="在IE7和FF中width宽度不包括padding，在Ie6中包括padding"><a href="#在IE7和FF中width宽度不包括padding，在Ie6中包括padding" class="headerlink" title="在IE7和FF中width宽度不包括padding，在Ie6中包括padding."></a>在IE7和FF中width宽度不包括padding，在Ie6中包括padding.</h4><h3 id="5-FF和IEBOX模型解释不一致导致相差2px"><a href="#5-FF和IEBOX模型解释不一致导致相差2px" class="headerlink" title="5. FF和IEBOX模型解释不一致导致相差2px"></a>5. FF和IEBOX模型解释不一致导致相差2px</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">box.style&#123;width:100;border:1px;&#125;</span><br></pre></td></tr></table></figure>
@@ -97,6 +56,61 @@ sessionStorage.clear();​//清空sessionStorage中所有信息</code></pre><h3 
 <h4 id="这个对于IE6-0和IE6-0以下的版本都隐藏-FF和OPera作用-属性选择器和子选择器还是有区别的-子选择器的范围从形式来说缩小了-属性选择器的范围比较大-如p-id-中-所有p标签中有id的都是同样式的"><a href="#这个对于IE6-0和IE6-0以下的版本都隐藏-FF和OPera作用-属性选择器和子选择器还是有区别的-子选择器的范围从形式来说缩小了-属性选择器的范围比较大-如p-id-中-所有p标签中有id的都是同样式的" class="headerlink" title="这个对于IE6.0和IE6.0以下的版本都隐藏,FF和OPera作用.属性选择器和子选择器还是有区别的,子选择器的范围从形式来说缩小了,属性选择器的范围比较大,如p[id]中,所有p标签中有id的都是同样式的."></a>这个对于IE6.0和IE6.0以下的版本都隐藏,FF和OPera作用.属性选择器和子选择器还是有区别的,子选择器的范围从形式来说缩小了,属性选择器的范围比较大,如p[id]中,所有p标签中有id的都是同样式的.</h4><h3 id="26-为什么FF下文本无法撑开容器的高度"><a href="#26-为什么FF下文本无法撑开容器的高度" class="headerlink" title="26. 为什么FF下文本无法撑开容器的高度"></a>26. 为什么FF下文本无法撑开容器的高度</h3><h4 id="标准浏览器中固定高度值的容器是不会象IE6里那样被撑开的-那我又想固定高度-又想能被撑开需要怎样设置呢？办法就是去掉height设置min-height-200px-这里为了照顾不认识min-height的IE6-可以这样定义"><a href="#标准浏览器中固定高度值的容器是不会象IE6里那样被撑开的-那我又想固定高度-又想能被撑开需要怎样设置呢？办法就是去掉height设置min-height-200px-这里为了照顾不认识min-height的IE6-可以这样定义" class="headerlink" title="标准浏览器中固定高度值的容器是不会象IE6里那样被撑开的,那我又想固定高度,又想能被撑开需要怎样设置呢？办法就是去掉height设置min-height:200px; 这里为了照顾不认识min-height的IE6 可以这样定义:"></a>标准浏览器中固定高度值的容器是不会象IE6里那样被撑开的,那我又想固定高度,又想能被撑开需要怎样设置呢？办法就是去掉height设置min-height:200px; 这里为了照顾不认识min-height的IE6 可以这样定义:</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    height:auto!important;</span><br><span class="line">    height:200px;</span><br><span class="line">    min-height:200px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="27-怎么样才能让层显示在FLASH之上呢"><a href="#27-怎么样才能让层显示在FLASH之上呢" class="headerlink" title="27.怎么样才能让层显示在FLASH之上呢?"></a>27.怎么样才能让层显示在FLASH之上呢?</h3><h4 id="解决的办法是给FLASH设置透明"><a href="#解决的办法是给FLASH设置透明" class="headerlink" title="解决的办法是给FLASH设置透明"></a>解决的办法是给FLASH设置透明</h4><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;paramname&#x3D;&quot;wmode&quot; value&#x3D;&quot;transparent&quot; &#x2F;&gt;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>浏览器</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CSS-盒子模型</title>
+    <url>/2020/04/10/css/boxModel/</url>
+    <content><![CDATA[<p><img style="width: 100%;" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586603896320&di=b56540e1f6f8fd3c0ee62fe0147e9e7f&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D1133747998%2C3446302875%26fm%3D214%26gp%3D0.jpg'></img></p>
+<a id="more"></a>
+<h3 id="盒子模型分为两种："><a href="#盒子模型分为两种：" class="headerlink" title="盒子模型分为两种："></a>盒子模型分为两种：</h3><h4 id="第一种是W3c标准的盒子模型（标准盒模型）"><a href="#第一种是W3c标准的盒子模型（标准盒模型）" class="headerlink" title="* 第一种是W3c标准的盒子模型（标准盒模型）"></a>* 第一种是W3c标准的盒子模型（标准盒模型）</h4><h4 id="第二种IE标准的盒子模型（怪异盒模型）"><a href="#第二种IE标准的盒子模型（怪异盒模型）" class="headerlink" title="* 第二种IE标准的盒子模型（怪异盒模型）"></a>* 第二种IE标准的盒子模型（怪异盒模型）</h4><h4 id="当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。"><a href="#当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。" class="headerlink" title="当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。"></a>当前大部分的浏览器支持的是W3c的标准盒模型，也保留了对怪异盒模型的支持，当然IE浏览器沿用的是怪异盒模型。怪异模式是“部分浏览器在支持W3C标准的同时还保留了原来的解析模式”，怪异模式主要表现在IE内核的浏览器。</h4><h3 id="标准盒模型与怪异盒模型的表现效果的区别之处："><a href="#标准盒模型与怪异盒模型的表现效果的区别之处：" class="headerlink" title="标准盒模型与怪异盒模型的表现效果的区别之处："></a>标准盒模型与怪异盒模型的表现效果的区别之处：</h3><h4 id="1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。"><a href="#1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。" class="headerlink" title="1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。"></a>1、标准盒模型中width指的是内容区域content的宽度；height指的是内容区域content的高度。</h4><h4 id="标准盒模型下盒子的大小-content-border-padding-margin"><a href="#标准盒模型下盒子的大小-content-border-padding-margin" class="headerlink" title="标准盒模型下盒子的大小 = content + border + padding + margin"></a>标准盒模型下盒子的大小 = content + border + padding + margin</h4><p><img src="https://d.xiaojishu.com/2017/12/11/0438c4471597387bc852af74b888dd55.jpg" alt=""></p>
+<h4 id="2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content-border-padding）；height指的是内容、边框、内边距总的高度"><a href="#2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content-border-padding）；height指的是内容、边框、内边距总的高度" class="headerlink" title="2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content + border + padding）；height指的是内容、边框、内边距总的高度"></a>2、怪异盒模型中的width指的是内容、边框、内边距总的宽度（content + border + padding）；height指的是内容、边框、内边距总的高度</h4><p><img src="https://d.xiaojishu.com/2017/12/11/e08e1649e8f51ea024159d2b20a13705.jpg" alt=""></p>
+]]></content>
+      <categories>
+        <category>CSS</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>浏览器-本地存储</title>
+    <url>/2020/04/09/browser/localStorage/</url>
+    <content><![CDATA[<p><img style="width: 100%" src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586456743592&di=57080dbf6fde90b18a4f4facc4572913&imgtype=0&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D825583228%2C4117796698%26fm%3D214%26gp%3D0.jpg'></img></p>
+<a id="more"></a>
+
+<h1 id="在浏览器中存储主要分为以下三种方式"><a href="#在浏览器中存储主要分为以下三种方式" class="headerlink" title="在浏览器中存储主要分为以下三种方式"></a>在浏览器中存储主要分为以下三种方式</h1><h2 id="1、localstorage-2、sessionStorage-3、cookie-4、localStorage与sessionStorage区别"><a href="#1、localstorage-2、sessionStorage-3、cookie-4、localStorage与sessionStorage区别" class="headerlink" title="1、localstorage  2、sessionStorage  3、cookie 4、localStorage与sessionStorage区别"></a>1、localstorage  2、sessionStorage  3、cookie 4、localStorage与sessionStorage区别</h2><h3 id="1、localStorage"><a href="#1、localStorage" class="headerlink" title="1、localStorage"></a>1、localStorage</h3><p>生命周期永久，除非用户清除浏览器中的localStorage信息，否则永远存在；</p>
+<p>存放数据大小一般为5MB；</p>
+<p>仅在浏览器中保存，不参与服务器通信；</p>
+<p>API调用：</p>
+<pre><code>localStorage.setItem(&quot;key&quot;,&quot;value&quot;);//以“key”为名称存储一个值“value”
+
+localStorage.getItem(&quot;key&quot;);//获取名称为“key”的值
+
+localStorage.removeItem(&quot;key&quot;);//删除名称为“key”的信息。
+
+localStorage.clear();​//清空localStorage中所有信息</code></pre><h3 id="2、sessionStorage"><a href="#2、sessionStorage" class="headerlink" title="2、sessionStorage"></a>2、sessionStorage</h3><p>仅在当前会话下有效，关闭页面或者浏览器后被清除；</p>
+<p>存放数据大小一般为5MB；</p>
+<p>仅在浏览器中保存，不参与服务器通信；</p>
+<p>可以接受源生接口，亦可以再次封装来对Object和Array有更好的支持；</p>
+<p>API调用：</p>
+<pre><code>sessionStorage.setItem(&quot;key&quot;,&quot;value&quot;);//以“key”为名称存储一个值“value”
+
+sessionStorage.getItem(&quot;key&quot;);//获取名称为“key”的值
+
+sessionStorage.removeItem(&quot;key&quot;);//删除名称为“key”的信息。
+
+sessionStorage.clear();​//清空sessionStorage中所有信息</code></pre><h3 id="3、Cookie"><a href="#3、Cookie" class="headerlink" title="3、Cookie"></a>3、Cookie</h3><p>生命周期为在cookie设置的过期时间之前一直有效，即使窗口或者浏览器关闭；</p>
+<p>存放数据大小为4K；</p>
+<p>有存储个数限制（各浏览器不同），一般不超过20个；</p>
+<p>与服务器端通信，每次都会携带在HTTP头中，cookie存储数据过多会带来性能问题；</p>
+<h3 id="4、localStorage与sessionStorage区别"><a href="#4、localStorage与sessionStorage区别" class="headerlink" title="4、localStorage与sessionStorage区别"></a>4、localStorage与sessionStorage区别</h3><p>我经常用到的存储方式为前两种，因此需要清楚了解它们之间的区别。</p>
+<p>localStorage与sessionStorage的API调用方法相同；</p>
+<p>不同浏览器无法共享localStorage或sessionStorage中的信息；</p>
+<p>相同浏览器的不同页面可以共享相同的localStorage（前提是页面属于相同域名和端口）；</p>
+<p>相同浏览器的不同页面无法共享sessionStorage的信息；</p>
+<h1 id="我的应用场景"><a href="#我的应用场景" class="headerlink" title="我的应用场景"></a>我的应用场景</h1><p>1、用vue做的后台管理平台，允许打开多个页面，不同页面可登陆不同的用户，用户之间互不干扰。</p>
+<p>结合上述信息与要求，如果使用localStorage，因为相同域名和端口，会导致不同页面数据共享，从而引发混乱。如果采用sessionStorage，不同页面即可保证互不干扰，且vue为SPA，无需打开新的页面，因此不会相互干扰。实测可行。</p>
 ]]></content>
       <categories>
         <category>浏览器</category>
